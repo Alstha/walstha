@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINDOWS ALS.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="winalstha.css">
+    
+</head>
+<body>
+    <div id="main">
+        
+            <button id="load" onclick="audio.play();"><i onclick="openFullscreen();" class="fas fa-power-off"></i><pre style="font: 3vw cursive;position: absolute; top: 0;">POWER OFF ! JUST CLICK IT </pre></button>
+        <div id="sthide">
+            <div id="all">
+                <div id="taskbar">
+                    <div id="taskmain">
+                        <div id="task1">
+                            <a href="#" ><i class="fas tcons fa-desktop" title="This PC"></i></a>
+                            <a href="#" ><i id='a4' class="fas tcons fa-window-restore" title="WIN Explorer"></i></a>
+                            <a href="#" ><i id="a2" class="fas tcons fa-music" title="Music"></i></a>
+                            <a href="#" ><i id="a1" class="fab tcons fa-gofore" title="Google"></i></a>
+                            <a href="#" ><i id="a3" class="fas tcons fa-calculator" title="Calculator"></i></a>
+                        </div>
+                        <div id="task2">
+                            <a href="#"><img id="logo" src="img/logo-removebg-preview-removebg-preview.png" alt=""></a>
+                        </div>
+                        <div id="task3">
+                            <a href="#"><i onclick="closeFullscreen();" title="INTERNET ACCESS" class="fas fa-wifi"></i></a>
+                            <span id="clock"></span>
+                        </div>
+                        
+                    </div>
+                    <a href="winalstha.html"><i  class=" refresh fas fa-sync-alt" title="REFRESH"></i></a>
+                </div>
+                
+                    <div id="icon">
+                        <i title="Close all tabs" class="fas close-left fa-window-close"></i>
+
+                        <div id="i1">
+                            <img title="WIN Explorer" id="ico1" class="ico" src="img/we-removebg-preview.png" alt="">
+                            <img title="Calculator" id="ico3" class="ico" src="img/calcu-removebg-preview.png" alt="">
+                            <img title="Settings" class="ico" src="img/settings.jpg" alt="">
+                            <img title="Songs" class="ico" id="ico2" src="img/music logo.jpg" alt="">
+                            <img title="Pictures" class="ico" src="img/picture.png" alt="">
+                        </div> 
+                        <div id="i2">
+                            
+                            <i onclick="audio.play();" title="hide/show Taskbar" id="hide"  class="fas fa-eye-slash"></i>
+                        </div>
+                    </div>
+                    <div id="window wins" class="wins">
+                        <i class="fas close fa-window-close"></i>
+                        
+                        <div id="apps1" class="tabs">
+                            <iframe id="google" src="https://www.google.com/webhp?igu=1"></iframe>               
+                        </div>
+                        <div id="apps2" class="tabs">
+                            <iframe id="music" src="https://alstha.github.io/amusic"></iframe>               
+                        </div>
+                        <div id="apps3" class="tabs">
+                            <iframe id="calcu" src="https://alstha.github.io/calculate"></iframe>               
+                        </div>
+                        <div id="apps4" class="tabs">
+                            <a href="https://www.youtube.com" target="blank"><img id="yt" src="img/i2.jpg" alt="Click YOUTUBE"></a><h2 style="color: #c9c8cd;">YOUTUBE</h2>            
+                        </div>
+                        <div id="apps5" class="tabs">
+                            <a href="https://www.facebook.com" target="blank"><img id="fb" src="img/i3.jpg" alt="Click FACEBOOK"></a><h2 style="color: #c9c8cd;">FACEBOOK</h2>            
+            
+                        </div>
+                        <div id="apps6" class="tabs">
+                            <a href="https://www.tiktok.com" target="blank"><img id="tiktok" src="img/i4.png" alt="Click TIKTOK"></a><h2 style="color: #c9c8cd;">TIK-TOK</h2>            
+                            
+                        </div>
+                        <div id="apps7" class="tabs">
+                            <a href="https://www.instagram.com" target="blank"><img id="insta" src="img/i5.jpg" alt="Click INSTAGRAM"></a><h2 style="color: #c9c8cd;">INSTAGRAM</h2>            
+                        </div>
+                        <div id="apps8" class="tabs">
+                            <a href="https://www.microsoft.com/en-us/edge?r=1" target="blank"><img id="edge" src="img/i6.jpg" alt="Click MS EDGE"></a><h2 style="color: #c9c8cd;">Microsoft Edge</h2>            
+                        </div>
+
+                        <div id="apps10">
+                            <iframe id="khop" src="https://alstha.github.io/khoplangi"></iframe>               
+                        </div>
+                        <div id="apps11">
+                            <button class="cbtn" id="start-camera">Start Camera</button>
+                            <button class="cbtn" id="stop-camera">Stop Camera</button>
+                            <video id="video" width="320" height="240" autoplay></video>
+                            
+                            <canvas id="canvas" width="320" height="240"></canvas>    
+                            <button class="cbtn" id="click-photo">Click Photo</button>
+                        </div>
+                        <div id="fex" class="fex">
+                            <div id="fex1">
+                              <img class="logo1" src="img/we-removebg-preview.png">
+                              <h2 class="n1">File Explorer</h2>
+                              
+                                <i style="transform: scaleY(3);" class="fexclose fas fa-window-close"></i>
+                                
+                              
+                            </div>
+                            <div id="fex2">
+                              
+                              <div id="mid">
+                                <img class="mids oo1" src="img/document.jpg" role="button" ><h3 class="names1 o1">DOCUMENTS</h3>
+                                <img class="mids oo2" src="img/download.png" role="button" ><h3 class="names1 o2">DOWNLOADS</h3>
+                                <img class="mids oo3" src="img/picture.png" role="button" ><h3 class="names1 o3">PICTURES</h3>
+                                <img class="mids oo4" src="img/song.jpg" role="button" ><h3 class="names1 o4">AUDIOS</h3>
+                                <img class="mids oo5" src="img/video.png" role="button" ><h3 class="names1 o5">VIDEOS</h3>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div id="apps9">
+                            <div id="ns">
+                                <button id="new" >NEW</button>
+                                <a href="alstha.txt" download><button id="save">SAVE</button></a>
+                                
+                            </div>
+                            <div id="te">
+                                <i id="bold" class="te fas fa-bold"></i>
+                                <i id="italic" class="te fas fa-italic"></i>
+                                <i id="underline" class="te fas fa-underline"></i>
+                                
+                            </div>
+                            <div id="note">
+                                <div id="text" download contenteditable="true">
+                                   <h3 id="tex"> "Write here" </h3>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+        </div>
+            <div id="stmenu">
+                <i class="fas close2 fa-window-close"></i>
+                <input type="search" name="search" placeholder="SEARCH HERE" id="search">
+                <h2 id="aapps">APPS AVAILABLE <i class="fas fa-sort-amount-down"></i></h2> 
+                <img style="opacity: 7%; z-index: -21; position:fixed;" src="img/logo-removebg-preview.png"  alt="Go to First">
+                <div id="box11">
+                    <div class="aapps-box1">
+                        <a href="#"><img id="aai1" class="aai" src="img/i1.png" title="Google"></a>
+                        <a href="#"><img id="aai2" class="aai" src="img/i2.jpg" title="Youtube"></a>
+                        <a href="#"><img id="aai3" class="aai" src="img/i3.jpg" title="Facebook"></a>
+                        <a href="#"><img id="aai4" class="aai" src="img/i4.png" title="TikTok"></a>
+                        <a href="#"><img id="aai5" class="aai" src="img/i5.jpg" title="Instagram"></a>
+                        <a href="#"><img id="aai6" class="aai" src="img/i6.jpg" title="Ms Edge"></a>
+                        <a href="#"><img id="aai7" class="aai" src="img/i7.jpg" title="Khoplangi Store"></a>
+                        <a href="#"><img id="aai8" class="aai" src="img/i8.png" title="Gallery"></a>
+                        <a href="#"><img id="aai9" class="aai" src="img/i9.jpg" title="Notepad"></a>
+                        
+                    </div>
+                </div>
+                <h2 id="recm">RECOMMENDED <i class="fas fa-sort-amount-down"></i></h2> 
+                <div id="box12">
+                    <div class="aapps-box2">
+                        <a href="#"><img id="aai10" class="aai" src="img/i2.jpg" title="Youtube"></a>
+                        <a href="#"><img id="aai11" class="aai" src="img/i3.jpg" title="Facebook"></a>
+                        <a href="#"><img id="aai12" class="aai" src="img/i7.jpg" title="Khoplangi"></a>
+                        <a href="#"><img id="aai13" class="aai" src="img/i5.jpg" title="Instagram"></a>
+                        <a href="#"><img id="aai14" class="aai" src="img/i8.png" title="Gallery"></a>
+                        <a href="#"><img id="aai15" class="aai" src="img/i9.jpg" title="Notepad"></a>
+                        
+                        
+                    </div>
+                </div>
+                <div id="box13">
+                    <a href="index.html"><i title="Shut Down" style="color: rgb(255, 51, 15);cursor: progress; transform: scale(2);margin-left: 1.88vw;margin-top: 4vh;" class="fas fa-power-off"></i></a>
+                </div>
+
+            </div>
+            
+            
+        </div>
+        </div>
+        
+</body>
+<script src="js1.js"></script>
+</html>
