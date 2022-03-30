@@ -13,19 +13,19 @@ const stmenu=document.getElementById("stmenu")
 
 
 var fs=document.documentElement;
-// load.addEventListener("click", () =>{
-//     fs.requestFullscreen();
-//     })
-// fullscreen.addEventListener("click", () =>{
-//     fs.requestFullscreen();
-// })
-// fullscreen.addEventListener("click", () =>{
-//     fs.requestFullscreen();
-// })
-// fullscreen2.addEventListener("click", () =>{
-//     fs.requestFullscreen();
-// })
-// var elem = document.documentElement; if (elem.requestFullscreen) { elem.requestFullscreen() }
+load.addEventListener("click", () =>{
+    fs.requestFullscreen();
+    })
+fullscreen.addEventListener("click", () =>{
+    fs.requestFullscreen();
+})
+fullscreen.addEventListener("click", () =>{
+    fs.requestFullscreen();
+})
+fullscreen2.addEventListener("click", () =>{
+    fs.requestFullscreen();
+})
+var elem = document.documentElement; if (elem.requestFullscreen) { elem.requestFullscreen() }
 aapps.addEventListener("click",()=>{
     if(box11.style.display=='block'){
         box11.style.display='none';
