@@ -1,5 +1,6 @@
 *{
     margin: 0;padding: 0;
+    user-select: none;
 }
 #load{
     width: 100vw;
@@ -320,20 +321,22 @@
     width: 0px;
 }
 #stmenu{
+    
     overflow: scroll;
     transition:all;
     border-radius: 10px;
     display: flex;
+    visibility: hidden;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
-    margin-top: -88vh;
+    margin-top: -89vh;
     margin-left: 25vw;
     width: 50vw;
     height: 75vh;
     background-color: rgba(127, 255, 212, 0.596);
-    transform:skew(0.3deg,0.3deg);
+    transform:skew(0.1deg,0.1deg);
     border: 5px ridge crimson;
 }
 #stmenu:hover{
@@ -461,12 +464,15 @@
 }
 
 /* file sexplorer */
-
+.els{
+    color: rgb(0, 0, 0);
+    background: yellow;
+}
 #fex{
     position: absolute;
     top: 10vh;
     left: 10vw;
-    background: rgba(158, 192, 207, 0.959);
+    background: rgb(0, 0, 0);
     box-shadow: blur(35px);
     z-index: 20;
     height: 77vh;
@@ -478,23 +484,79 @@
     border-radius: 25px;
     box-shadow: 12px 12px 15px rgb(5, 13, 58);
 }
+.bgchange{
+    transform: scale(2);
+    margin-left: 60vw;
+    color: white;
+    
+}
+#costumize{
+    margin-top: 20vh;
+}
+.bgchange:hover{
+    color: rgb(239, 0, 0);
+    cursor: pointer;
+}
+
+.cosbox{
+    text-align: center;
+    margin-left: 55vw;
+    margin-top: -4vh;
+    width: fit-content;
+    display: none;
+    filter: blur(0.7px);
+}
+#exbar{
+    width: 81vw;
+    height: 5vh;
+    padding-top:10px ;
+    background: rgb(19, 19, 19);
+    
+    
+    
+}
+.cosbox ul{
+    border-radius: 30px 60px;
+    background: rgb(0, 0, 0);
+    color: #dddddd;
+    width: 200px;
+    font-weight: bolder;
+    padding: 8px;
+    margin-top: 5px;
+    border: 3px solid rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s;
+    z-index: 32;
+}
+
+.cosbox ul:hover{
+    background: white;
+    color: #000;
+}
+
+
+
 
 .logo1{
     width: 35px;
     opacity: 80%;
     background-color: rgb(56, 21, 4);
-    padding: 5px;
+    padding: 3px;
     border-radius: 50%;
-    box-shadow:10px 2px 15px rgb(53, 7, 54);
+    margin-top: -3vh;
 }
 .n1{
-    margin-top: -13vh;
-    margin-left: 33.5vw;
-    border: 5px double orange;
+    margin-top: -7vh;
+    margin-left: 24vw;
+    width: 30vw;
     border-top: none;
     font-size: 1.5vw ;
-    width: fit-content;
+    text-align: center;
     padding: .3vw;
+    color: wheat;
+    background: black;
+    border-radius: 30px;
     font-family: 'Righteous', cursive;
 }
 #fex1{
@@ -513,9 +575,9 @@
     justify-content: start;
     align-items: center;
     
-    margin-top: 2vh;
+    margin-top: 3vh;
     /* background: rgba(255, 0, 0, 0.479); */
-    border: 3px double black;
+    border: 3px double rgb(118, 118, 118);
     padding-bottom: 15px ;
 }
 
@@ -558,17 +620,6 @@
 }
 
 /* fex exit */
-.fexclose{
-    display: none;
-    margin-left: 77vw;
-    margin-top: -2vh;
-    cursor: pointer;
-    transform: scale(3);
-}
-.fexclose:hover{
-    
-    color: red;
-}
 
 #note{
     transform: translate(10%,7%);
@@ -680,4 +731,106 @@ margin-top: 3.5vh;
 }
 #apps11 #video,#canvas{
     margin-left: 7.5vw;
+}
+#wifidiv{
+    display: block;
+    position: absolute;
+    top: 10vh;
+    background: rgb(59, 245, 59);
+    filter: blur(1px);
+    font-style: oblique;
+    
+}
+.fexclose{
+    display: none;
+    margin-left: 78vw;
+    margin-top: -5vh;
+    background: black;
+    cursor: pointer;
+    color: #dddddd;
+    border-radius: 50%;
+    padding: 3px;
+    position: absolute;
+    transform: scale(1.7);
+}
+.fexclose:hover{
+    
+    color: red;
+}
+
+#mainfex {
+    position: absolute;
+    top: 17vh;
+    left: 9vw;
+    width: 70vw;
+    height: 57vh;
+    overflow: scroll;
+    background: rgb(194, 194, 194);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: -1;
+}
+#document {
+    font: 1vw sans-serif;
+    margin-top: 5px;
+    width: 15vw;
+    height: 4vh;
+    filter: blur(0.5px);
+    background: rgba(255, 255, 0, 0.332);
+    border: 3px ridge black;
+    border-radius: 50px;
+   text-align: center;
+   text-shadow: 2px 2px 2px rgb(255, 0, 60);
+}
+.fexrefresh{
+    position: absolute;
+    margin-left: -33vw;
+    margin-top: 10px;
+    transform: scale(1.5);
+    cursor: progress;
+    background: #80a8b0;
+    border-radius: 50%;
+    padding: 5px;
+}
+#acs{
+    display: inline-block;
+    
+}
+
+#allcontent{
+    margin:7.5vh -25vw;
+    width: 65vw;
+    height: 40vh;
+    background-color: #f5af19;
+    border-radius: 10px 30px;
+    display: grid;
+    grid-template-columns: auto;
+    background-image: url(img/doc.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#allcontent2{
+    
+    width: 65vw;
+    height: 40vh;
+   margin-left: 7.5vw;
+    margin-top: -47.5vh;
+    display: grid;
+    grid-template-columns: auto;
+    
+   
+    
+}
+.acs{
+    font: 1.25vw sans-serif;
+    background: rgba(66, 58, 58, 0.397);
+    width: 50%;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
