@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WINDOWS ALS.</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="winalstha.css">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
+
 </head>
-<body>
-    <div id="main">
+<body data-scroll-container>
+    <div id="main" data-scroll-container>
         
             <button id="load" onclick="audio.play();"><i onclick="openFullscreen();" class="fas fa-power-off"></i><pre style="font: 3vw cursive;position: absolute; top: 0;">POWER OFF ! JUST CLICK IT </pre></button>
         <div id="sthide">
@@ -30,7 +31,12 @@
                             <a href="#"><img id="logo" src="img/logo-removebg-preview-removebg-preview.png" alt=""></a>
                         </div>
                         <div id="task3">
-                            <a href="#"><i onclick="closeFullscreen();" title="INTERNET ACCESS" class="fas fa-wifi"></i></a>
+                            <a href="#"><i onclick="closeFullscreen();"  class="fas fa-wifi"></i></a>
+                            <div style="display: none;" id="wifidiv">
+                                
+                                <h2>You are connected..</h2>
+
+                            </div>
                             <span id="clock"></span>
                         </div>
                         
@@ -98,8 +104,45 @@
                             <div id="fex1">
                               <img class="logo1" src="img/we-removebg-preview.png">
                               <h2 class="n1">File Explorer</h2>
-                              
-                                <i style="transform: scaleY(3);" class="fexclose fas fa-window-close"></i>
+                              <i class="fexclose fas fa-close"></i>
+                              <div id="exbar">
+                                  <span id="costumize">
+                                    <i title="COSTOMIZE" class=" bgchange fa-solid fa-star-half-stroke"></i>
+                                    <div class="cosbox">
+                                        <ul id="re">RESET </ul>
+                                        <ul id="dn">DAY / NIGHT MODE </ul>
+                                        <ul id="bo">BOLD (toggle)</ul>
+                                        <ul id="hs">SIDEBAR (toggle)</ul>
+                                    </div>
+                                  </span>
+                              </div>
+                              <div class="mainfex" id="mainfex">
+                                  <div id="document">
+                                    <i class="fexrefresh fa-solid fa-rotate-right"></i>
+                                    <h2>DOCUMENT <i class="fa-solid fa-file-arrow-down"></i></h2>
+                                    <div id="acs">
+                                        <div id="allcontent">
+                                            <span class="acs" id="ac1">ALSTHA 1</span>
+                                            <span class="acs" id="ac2">ALSTHA 2</span>
+                                            <span class="acs" id="ac3">ALSTHA 3</span>
+                                            <span class="acs" id="ac4">ALSTHA 4</span>
+                                            <span class="acs" id="ac5">ALSTHA 5</span>
+                                            <span class="acs" id="ac6">ALSTHA 6</span>
+                                            <span class="acs" id="ac7">ALSTHA 7</span>
+                                        </div>
+                                        <div id="allcontent2">
+                                                <span class="acs" id="ac8">ALSTHA 8</span>
+                                                <span class="acs" id="ac9">ALSTHA 9</span>
+                                                <span class="acs" id="ac10">ALSTHA 10</span>
+                                                <span class="acs" id="ac11">ALSTHA 11</span>
+                                                <span class="acs" id="ac12">ALSTHA 12</span>
+                                                <span class="acs" id="ac13">ALSTHA 13</span>
+                                                <span class="acs" id="ac14">ALSTHA 14</span>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                              </div>
                                 
                               
                             </div>
@@ -177,8 +220,9 @@
             
             
         </div>
-        </div>
+    </div>
         
 </body>
 <script src="js1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 </html>
