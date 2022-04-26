@@ -8,24 +8,29 @@ const box12=document.getElementById("box12")
 const recm=document.getElementById("recm")
 const sthide=document.getElementById("sthide")
 const stmenu=document.getElementById("stmenu")
+const dn=document.getElementById("dn")
+const bo=document.getElementById("bo")
+const hs=document.getElementById("hs")
+const re=document.getElementById("re")
+const mainfex=document.getElementById("mainfex")
 
 
 
 
 var fs=document.documentElement;
-load.addEventListener("click", () =>{
-    fs.requestFullscreen();
-    })
-fullscreen.addEventListener("click", () =>{
-    fs.requestFullscreen();
-})
-fullscreen.addEventListener("click", () =>{
-    fs.requestFullscreen();
-})
-fullscreen2.addEventListener("click", () =>{
-    fs.requestFullscreen();
-})
-var elem = document.documentElement; if (elem.requestFullscreen) { elem.requestFullscreen() }
+// load.addEventListener("click", () =>{
+//     fs.requestFullscreen();
+//     })
+// fullscreen.addEventListener("click", () =>{
+//     fs.requestFullscreen();
+// })
+// fullscreen.addEventListener("click", () =>{
+//     fs.requestFullscreen();
+// })
+// fullscreen2.addEventListener("click", () =>{
+//     fs.requestFullscreen();
+// })
+// var elem = document.documentElement; if (elem.requestFullscreen) { elem.requestFullscreen() }
 aapps.addEventListener("click",()=>{
     if(box11.style.display=='block'){
         box11.style.display='none';
@@ -331,3 +336,61 @@ click_button.addEventListener('click', function() {
    	// data url of the image
    	console.log(image_data_url);
 });
+
+
+
+$(document).ready(function(){
+    $(".fa-wifi").on('click', function(){
+        $("#wifidiv").toggle()
+    })
+    $(".cosbox ul").on('click', function(){
+        $(".cosbox").hide()
+    })
+    $(".bgchange").on('click', function(){
+        $(".cosbox").toggle()
+        $(".cosbox").css('margin-top','4vh')
+    })
+    
+    
+})
+dn.addEventListener("click",()=>{
+    if(fex.style.background=="transparent"){
+        fex.style.background="black"
+        fex.classList.toggle("els")
+        mainfex.classList.toggle("mainfex")
+        
+    }
+    else{
+        fex.style.background="transparent"
+        fex.classList.toggle("els")
+        mainfex.classList.toggle("mainfex")
+
+    }
+})
+bo.addEventListener("click",()=>{
+    if(fex.style.fontWeight=="bold"){
+        fex.style.fontWeight="normal"
+        
+    }
+    else{
+        fex.style.fontWeight="bold"
+        
+    }
+})
+hs.addEventListener("click",()=>{
+    if(fex2.style.display=="none"){
+        fex2.style.display="block"
+        
+    }
+    else{
+        fex2.style.display="none"
+        
+    }
+})
+re.addEventListener("click",()=>{
+    fex.style.background="black"
+    
+    fex2.style.display="block"
+    fex.style.fontWeight="normal"
+
+})
