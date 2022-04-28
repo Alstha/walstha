@@ -12,18 +12,36 @@ const dn=document.getElementById("dn")
 const bo=document.getElementById("bo")
 const hs=document.getElementById("hs")
 const re=document.getElementById("re")
+
 const mainfex=document.getElementById("mainfex")
 const mids1=document.getElementsByClassName("mids")[0]
 const mids2=document.getElementsByClassName("mids")[1]
 const mids3=document.getElementsByClassName("mids")[2]
 const mids4=document.getElementsByClassName("mids")[3]
 const mids5=document.getElementsByClassName("mids")[4]
-const test=document.getElementsByClassName("acs")
 
 
 const fexhead=document.getElementById("fexhead")
 const allcontent1=document.getElementById("allcontent1")
 const allcontent2=document.getElementById("allcontent2")
+
+const test=document.querySelector("#document").querySelectorAll(".acs")
+
+const testing=document.getElementById("acs5")
+const testing2=testing.children;
+const testing3=listchildren[1];
+const testing4=testing3.cloneNode(true);
+testing.appendChild(testing4)
+
+
+
+test.forEach(element =>{
+    element.addEventListener("click", function(){
+        test.forEach(nav=>nav.classList.remove("als"))
+
+        this.classList.add("als")
+    })
+});
 
 
 
@@ -409,10 +427,10 @@ re.addEventListener("click",()=>{
     fex2.style.display="block"
     fex.style.fontWeight="normal"
 
-    let test2=test.focus()
-    test.classList.add("test2")
+    
 })
 $(document).ready(function(){
+    
     $(".oo1").on('click' ,function(){
         $(".mids").css('border-radius','50%')
         $(".allcontents").css('display','none')
@@ -453,10 +471,11 @@ $(document).ready(function(){
 
     })
     
-    $(".acs").focus(function(){
-        $(".acs").classList.add("als")
-        
-
+    $(".delete").on('click',function(){
+        $(".als").css("display","none")
+    })
+    $(".restore").on('click',function(){
+        $(".acs").css("display","block")
     })
     
 })
@@ -477,4 +496,5 @@ mids4.addEventListener("click",()=>{
 mids5.addEventListener("click",()=>{
     fexhead.textContent="VIDEOS"
 })
+
 
