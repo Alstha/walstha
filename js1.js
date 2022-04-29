@@ -19,29 +19,68 @@ const mids2=document.getElementsByClassName("mids")[1]
 const mids3=document.getElementsByClassName("mids")[2]
 const mids4=document.getElementsByClassName("mids")[3]
 const mids5=document.getElementsByClassName("mids")[4]
-
-
 const fexhead=document.getElementById("fexhead")
 const allcontent1=document.getElementById("allcontent1")
 const allcontent2=document.getElementById("allcontent2")
-
+const allcontent3=document.getElementById("allcontent3")
+const allcontent4=document.getElementById("allcontent4")
+const allcontent5=document.getElementById("allcontent5")
 const test=document.querySelector("#document").querySelectorAll(".acs")
+const test2=document.querySelector("#document").querySelectorAll(".als2")
+const del=document.querySelector("#delete")
 
-const testing=document.getElementById("acs5")
-const testing2=testing.children;
-const testing3=listchildren[1];
-const testing4=testing3.cloneNode(true);
-testing.appendChild(testing4)
+const newfile=document.getElementsByClassName("newfile")[0]
+const newf2=document.getElementById("acs4")
+const newf3=document.getElementById("acs2")
+const newf4=document.getElementById("acs5")
+const newf5=document.getElementById("acs6")
+const newf6=document.getElementById("acs7")
+
+$( "#result" ).load( "ajax/test.html #container" );
+
+
+
+newfile.addEventListener("click",addnew)
+    
+function addnew(){
+    const newdiv=document.createElement("div")
+    newdiv.classList.add("acs")
+
+    if(allcontent1.style.display=="grid"){
+    newf2.appendChild(newdiv)
+}
+    if(allcontent2.style.display=="grid"){
+    newf3.appendChild(newdiv)
+    newdiv.classList.add('als')
+}
+    if(allcontent3.style.display=="grid"){
+    newf4.appendChild(newdiv)
+    newdiv.classList.add('als')
+}
+    if(allcontent4.style.display=="grid"){
+        newf5.appendChild(newdiv)
+        newdiv.classList.add('als')
+    }
+        if(allcontent5.style.display=="grid"){
+        newdiv.classList.add('als')
+    newf6.appendChild(newdiv)}
+    
+    newdiv.innerHTML="NEW FILE "
+    newdiv.style.background="blue"
+
+}
 
 
 
 test.forEach(element =>{
     element.addEventListener("click", function(){
         test.forEach(nav=>nav.classList.remove("als"))
-
+       
         this.classList.add("als")
     })
 });
+
+
 
 
 
@@ -209,6 +248,7 @@ var tcons=document.getElementsByClassName('tcons');
 
 
 $(document).ready(function(){
+   
     $(".close-left,.close,.fexclose").on("click", function(){
         $(".close-left").hide()
        
@@ -475,7 +515,7 @@ $(document).ready(function(){
         $(".als").css("display","none")
     })
     $(".restore").on('click',function(){
-        $(".acs").css("display","block")
+        $(".acs").css("display","flex")
     })
     
 })
