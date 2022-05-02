@@ -27,6 +27,8 @@ const allcontent4=document.getElementById("allcontent4")
 const allcontent5=document.getElementById("allcontent5")
 const test=document.querySelector("#document").querySelectorAll(".acs")
 const test2=document.querySelector("#document").querySelectorAll(".als2")
+
+
 const del=document.querySelector("#delete")
 
 const newfile=document.getElementsByClassName("newfile")[0]
@@ -36,7 +38,36 @@ const newf4=document.getElementById("acs5")
 const newf5=document.getElementById("acs6")
 const newf6=document.getElementById("acs7")
 
-$( "#result" ).load( "ajax/test.html #container" );
+
+const img2=document.querySelector(".df").addEventListener("click",()=>{
+
+    img2.style.background="red"
+})
+console.log(img2)
+
+var indexvalue=0;
+showImg(indexvalue)
+function btm_slide(e){showImg(indexvalue=e);}
+function side_slide(e){showImg(indexvalue+=e);}
+
+function showImg(e){
+    var i;
+    const img=document.querySelectorAll(".imgs")
+    const sliders=document.querySelectorAll("#imglabel span")
+
+
+    if(e>img.length){indexvalue=1}
+    if(e<1){indexvalue=img.length}
+    for(i=0;i<img.length;i++){
+        img[i].style.display="none";
+    }
+    for(i=0;i<sliders.length;i++){
+        sliders[i].style.background="grey"
+    }
+    img[indexvalue-1].style.display="inline-block";
+    sliders[indexvalue-1].style.background="orange";
+
+}
 
 
 
@@ -79,6 +110,7 @@ test.forEach(element =>{
         this.classList.add("als")
     })
 });
+
 
 
 
@@ -214,6 +246,7 @@ var apps8=document.getElementById('apps8');
 var apps9=document.getElementById('apps9');
 var apps10=document.getElementById('apps10');
 var apps11=document.getElementById('apps11');
+var appsimg=document.getElementById('image');
 var fex=document.getElementById('fex');
 
 var tab=document.getElementById('window');
@@ -236,6 +269,7 @@ var tcons=document.getElementsByClassName('tcons');
     apps9.style.display="none";
     apps10.style.display="none";
     apps11.style.display="none";
+    appsimg.style.display="none";
     fex.style.display="none";
     cross.style.display="none";
     fexclose.style.display="none";
@@ -249,12 +283,25 @@ var tcons=document.getElementsByClassName('tcons');
 
 $(document).ready(function(){
    
+    $(".fexclose").on('click',function(){
+        $(".allcontents").css("display","none")
+        fexhead.innerText="DOCUMENT"
+        $(".mids").css('border-radius','50%')
+        $(".oo1").css('border-radius','20%')
+        $("#allcontent1").css("display","grid")
+    })
     $(".close-left,.close,.fexclose").on("click", function(){
         $(".close-left").hide()
        
     });
     $("#a1,#a2,#a3,#aai1,#aai2,#aai3,#aai4,#aai5,#aai6,#aai7,#aai8,#aai9,#aai10,#aai11,#aai12,#aai13,#aai14,#aai15,#ico2,#ico3").on('click',function(){
         $(".wins").css("display","flex");
+        $(".close").toggle();
+        $(".close-left").show()
+
+    })
+    $(".ico5").on('click',function(){
+        $("#image").css("display","flex");
         $(".close").toggle();
         $(".close-left").show()
 
@@ -317,11 +364,34 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     
+    // $(".next").on("click",function(){
+    //     $(".imgs1").css("margin-left","-100px")
+        
+    // })
+    // $(".prev").on("click",function(){
+    //     $(".imgs1").css("margin-left","100px")
+    // })
     $("#logo").on("click",function(){
-        $("#stmenu").toggle()
+        $("#stopen").css("display","flex")
+        $("#stmenu").css("display","none")
+       
+    });
+    $("#stbtn").on("click",function(){
+        $("#stopen").css("display","none")
+        $("#stmenu").css("display","flex")
+        
+        
+       
+    });
+    $("#stbtn2").on("click",function(){
+        $("#stopen").css("display","none")
+        
+        
+        
+       
     });
     $(".close2").on("click",function(){
-        $("#stmenu").hide()
+        $("#stmenu").css("display","none")
     });
     $(".aai").on("click",function(){
         $("#stmenu").hide()
